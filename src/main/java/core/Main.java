@@ -12,8 +12,10 @@ import javax.security.auth.login.LoginException;
 
 public class Main {
 
+    static String token;
+
     public static void main(String args[]) throws LoginException {
-        JDA jda = new JDABuilder(AccountType.BOT).setToken("NTE2OTU0NDIzMjczMDYyNDIw.DuUWMw.vumZSg0cdYKpKwFv360W5bLjGkA").build();
+        JDA jda = new JDABuilder(AccountType.BOT).setToken(token).build();
 
         jda.setAutoReconnect(true);
 
